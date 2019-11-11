@@ -4,8 +4,12 @@ Panels:
     Name: Displays
     Property Tree Widget:
       Expanded:
+        - /Global Options1
+        - /Status1
         - /MotionPlanning1
         - /TF1
+        - /TF1/Frames1
+        - /TF1/Frames1/camera_depth_frame1
       Splitter Ratio: 0.5
     Tree Height: 639
   - Class: rviz/Selection
@@ -174,6 +178,10 @@ Visualization Manager:
             Alpha: 1
             Show Axes: false
             Show Trail: false
+          robot_base:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
           scan:
             Alpha: 1
             Show Axes: false
@@ -209,10 +217,6 @@ Visualization Manager:
             Show Axes: false
             Show Trail: false
             Value: true
-          world:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
           wrist_1_link:
             Alpha: 1
             Show Axes: false
@@ -364,6 +368,10 @@ Visualization Manager:
             Alpha: 1
             Show Axes: false
             Show Trail: false
+          robot_base:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
           scan:
             Alpha: 1
             Show Axes: false
@@ -399,10 +407,6 @@ Visualization Manager:
             Show Axes: false
             Show Trail: false
             Value: true
-          world:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
           wrist_1_link:
             Alpha: 1
             Show Axes: false
@@ -424,24 +428,136 @@ Visualization Manager:
       Value: true
       Velocity_Scaling_Factor: 1
     - Class: rviz/TF
-      Enabled: false
+      Enabled: true
       Frame Timeout: 15
       Frames:
-        All Enabled: true
+        All Enabled: false
+        base:
+          Value: false
+        base_link:
+          Value: false
+        camera_bottom_screw_frame:
+          Value: false
+        camera_color_frame:
+          Value: false
+        camera_color_optical_frame:
+          Value: false
+        camera_depth_frame:
+          Value: false
+        camera_depth_optical_frame:
+          Value: false
+        camera_left_ir_frame:
+          Value: false
+        camera_left_ir_optical_frame:
+          Value: false
+        camera_link:
+          Value: true
+        camera_right_ir_frame:
+          Value: false
+        camera_right_ir_optical_frame:
+          Value: false
+        crg_200_tcp_link:
+          Value: false
+        ee_link:
+          Value: false
+        forearm_link:
+          Value: false
+        front_table_legs:
+          Value: false
+        front_table_plate:
+          Value: false
+        fts_base_link:
+          Value: false
+        fts_reference_link:
+          Value: false
+        fts_tool_link:
+          Value: false
+        realsense_record_link:
+          Value: true
+        robot_base:
+          Value: false
+        scan:
+          Value: false
+        shoulder_link:
+          Value: false
+        sick_scanner_link:
+          Value: false
+        target_link_left:
+          Value: false
+        target_link_middle:
+          Value: false
+        target_link_right:
+          Value: false
+        tool0:
+          Value: false
+        upper_arm_link:
+          Value: false
+        wrist_1_link:
+          Value: false
+        wrist_2_link:
+          Value: false
+        wrist_3_link:
+          Value: false
       Marker Scale: 1
       Name: TF
       Show Arrows: true
       Show Axes: true
       Show Names: true
       Tree:
-        {}
+        robot_base:
+          base_link:
+            base:
+              {}
+            front_table_legs:
+              front_table_plate:
+                {}
+            realsense_record_link:
+              {}
+            shoulder_link:
+              upper_arm_link:
+                forearm_link:
+                  wrist_1_link:
+                    wrist_2_link:
+                      wrist_3_link:
+                        ee_link:
+                          {}
+                        tool0:
+                          camera_bottom_screw_frame:
+                            camera_link:
+                              camera_depth_frame:
+                                camera_color_frame:
+                                  camera_color_optical_frame:
+                                    {}
+                                camera_depth_optical_frame:
+                                  {}
+                                camera_left_ir_frame:
+                                  camera_left_ir_optical_frame:
+                                    {}
+                                camera_right_ir_frame:
+                                  camera_right_ir_optical_frame:
+                                    {}
+                          fts_base_link:
+                            fts_reference_link:
+                              {}
+                            fts_tool_link:
+                              crg_200_tcp_link:
+                                {}
+            sick_scanner_link:
+              scan:
+                {}
+            target_link_left:
+              {}
+            target_link_middle:
+              {}
+            target_link_right:
+              {}
       Update Interval: 0
-      Value: false
+      Value: true
   Enabled: true
   Global Options:
     Background Color: 48; 48; 48
     Default Light: true
-    Fixed Frame: world
+    Fixed Frame: base_link
     Frame Rate: 30
   Name: root
   Tools:
@@ -477,10 +593,10 @@ Visualization Manager:
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.00999999978
-      Pitch: 0.220398441
+      Pitch: 1.19539762
       Target Frame: <Fixed Frame>
       Value: Orbit (rviz)
-      Yaw: 0.385400325
+      Yaw: 1.55539942
     Saved: ~
 Window Geometry:
   "&Displays":

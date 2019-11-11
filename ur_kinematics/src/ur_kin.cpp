@@ -12,15 +12,16 @@ namespace ur_kinematics {
       return (x > 0) - (x < 0);
     }
     const double PI = M_PI;
-
+    
+    // changed for UR10e
     //#define UR10_PARAMS
     #ifdef UR10_PARAMS
-    const double d1 =  0.1273;
-    const double a2 = -0.612;
-    const double a3 = -0.5723;
-    const double d4 =  0.163941;
-    const double d5 =  0.1157;
-    const double d6 =  0.0922;
+    const double d1 =  0.1807;
+    const double a2 = -0.6127;
+    const double a3 = -0.57155;
+    const double d4 =  0.17414;
+    const double d5 =  0.11985;
+    const double d6 =  0.11655;
     #endif
 
     //#define UR5_PARAMS

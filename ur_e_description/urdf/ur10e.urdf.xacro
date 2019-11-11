@@ -52,12 +52,12 @@
 
     <!-- Kinematic model -->
     <!-- Properties from urcontrol.conf -->
-    <xacro:property name="d1" value="0.181" />
-    <xacro:property name="a2" value="-0.613" />
-    <xacro:property name="a3" value="-0.571" />
-    <xacro:property name="d4" value="0.135" />
-    <xacro:property name="d5" value="0.120" />
-    <xacro:property name="d6" value="0.117" />
+    <xacro:property name="d1" value="0.1807" />
+    <xacro:property name="a2" value="-0.6127" />
+    <xacro:property name="a3" value="-0.57155" />
+    <xacro:property name="d4" value="0.17415" />
+    <xacro:property name="d5" value="0.11985" />
+    <xacro:property name="d6" value="0.11655" />
 
     <!-- Arbitrary offsets for shoulder/elbow joints -->
     <xacro:property name="shoulder_offset" value="0.176" />
